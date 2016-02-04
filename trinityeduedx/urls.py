@@ -8,7 +8,7 @@ from django.conf.urls import patterns, url
 
 USERNAME_PATTERN = r'(?P<username>[\w.+-]+)'
 
-urlpatterns = patterns(
+url_patterns = patterns(
     '',
     url(
         r'^api/user/v1/trinityprofile/' + USERNAME_PATTERN + '$',
