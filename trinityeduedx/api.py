@@ -47,7 +47,7 @@ def get_account_settings(requesting_user, username=None, configuration=None, vie
         username = requesting_user.username
 
     has_full_access = requesting_user.username == username or requesting_user.is_staff
-    # return_all_fields = has_full_access and view != 'shared'
+
     if not has_full_access:
         return {}
 
@@ -91,10 +91,7 @@ def update_account_settings(requesting_user, update, username=None):
     if username is None:
         username = requesting_user.username
 
-    try:
-        profile = _get_trinityuserprofile(username)
-    except UserNotFound:
-        profile =  _create_trinityuserprofile(username)
+    profile = _get_trinityuserprofile(username)
 
     if requesting_user.username != username:
         raise UserNotAuthorized()
@@ -132,12 +129,3 @@ def _get_trinityuserprofile(username):
         raise UserNotFound()
 
     return existing_user_profile
-
-def _create_trinityuserprofile(username):
-    """
-    Helper method to create a new TrinityUserProfile if none yet exists
-    """
-    existing_user = User.objects.get(username=username)
-    tprofile = TrinityUserProfile(user=existing_user)
-    tprofile.save()
-    return tprofile
