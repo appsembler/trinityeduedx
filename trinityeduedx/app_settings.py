@@ -3,6 +3,9 @@ from os import environ
 from django.conf import settings
 
 DISTRICT_CHOICES = [
+    ('TEA','Texas Education Agency'),
+    ('CHARTER','Charter School District'),
+    ('HOME','Home School'),
     ('109901','Abbott ISD'),
     ('95901','Abernathy ISD'),
     ('221901','Abilene ISD'),
@@ -770,6 +773,26 @@ DISTRICT_CHOICES = [
     ('70911','Red Oak ISD'),
     ('19906','Redwater ISD'),
     ('196903','Refugio ISD'),
+    ('ESC1', 'Region 1 ESC'),
+    ('ESC2', 'Region 2 ESC'),
+    ('ESC3', 'Region 3 ESC'),
+    ('ESC4', 'Region 4 ESC'),
+    ('ESC5', 'Region 5 ESC'),
+    ('ESC6', 'Region 6 ESC'),
+    ('ESC7', 'Region 7 ESC'),
+    ('ESC8', 'Region 8 ESC'),
+    ('ESC9', 'Region 9 ESC'),
+    ('ESC10', 'Region 10 ESC'),
+    ('ESC11', 'Region 11 ESC'),
+    ('ESC12', 'Region 12 ESC'),
+    ('ESC13', 'Region 13 ESC'),
+    ('ESC14', 'Region 14 ESC'),
+    ('ESC15', 'Region 15 ESC'),
+    ('ESC16', 'Region 16 ESC'),
+    ('ESC17', 'Region 17 ESC'),
+    ('ESC18', 'Region 18 ESC'),
+    ('ESC19', 'Region 19 ESC'),
+    ('ESC20', 'Region 20 ESC'),
     ('137902','Ricardo ISD'),
     ('45903','Rice Cons ISD'),
     ('175911','Rice ISD'),
@@ -1026,7 +1049,8 @@ DISTRICT_CHOICES = [
     ('71905','Ysleta ISD'),
     ('253901','Zapata County ISD'),
     ('3906','Zavalla ISD'),
-    ('25906','Zephyr ISD')
+    ('25906','Zephyr ISD'),
+    ('OTHER','Other')
 ]
 
 
