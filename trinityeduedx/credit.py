@@ -21,7 +21,7 @@ class CreditsMixin(XBlockMixin):
     credit_provider = String(
         display_name=_("Credit Provider"),
         help=_("Name of the entity providing the credit units"),
-        default=None,
+        default="",
         scope=Scope.settings,
     )
 
