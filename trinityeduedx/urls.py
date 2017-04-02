@@ -11,7 +11,7 @@ USERNAME_PATTERN = r'(?P<username>[\w.+-]+)'
 urlpatterns = patterns(
     '',
     url(
-        r'^api/user/v1/trinityprofile/' + USERNAME_PATTERN + '$',
+        r'' + USERNAME_PATTERN + '$',
         TrinityUserProfileView.as_view(),
         name="trinityuserprofile_api"
     ),
